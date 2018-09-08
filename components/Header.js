@@ -3,6 +3,7 @@ import css from "../styles.scss"
 
 const Header = () => (
     <div className={css.headerGrid}>
+        <title>Beau Taylor-Ladd's Resume</title>
         <link rel="stylesheet" href="/_next/static/style.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
         <span></span>
