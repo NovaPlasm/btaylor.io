@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background-image: url("https://i.imgur.com/el0R4rO.jpg");
+  background-size: cover;
+  background-position: 20% 100%;
+}
+
+.grid {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.6);
+  grid-template-rows: auto 1fr 1fr;
+  height: 100vh;
+  color: #fff;
+}
+
+.headerGrid {
+  display: grid;
+  padding: 0 25% 0 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.buttonStyle {
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  padding: 7px 10px 7px 10px;
+  text-decoration: none;
+  color: #fff;
+  margin-right:16px;
+  min-width: 118px;
+  text-align: center;
+  place-self: center;
+}
+
+.hello {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  justify-self: center;
+  align-self: end;
+  margin:0;
+}
+
+.desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  align-self: start;
+  justify-self: center;
+}

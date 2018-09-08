@@ -1,0 +1,32 @@
+{
+  "name": "btaylor.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "cross-env": "^5.2.0",
+    "next": "^6.1.2",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NovaPlasm/btaylor.io.git"
+  },
+  "keywords": [],
+  "author": "Beau Taylor-Ladd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NovaPlasm/btaylor.io/issues"
+  },
+  "homepage": "https://github.com/NovaPlasm/btaylor.io#readme"
+}
