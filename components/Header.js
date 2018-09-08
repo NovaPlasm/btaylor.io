@@ -5,6 +5,7 @@ const Header = () => (
     <div className={css.headerGrid}>
         <link rel="stylesheet" href="/_next/static/style.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <span></span>
         <Link href="/">
           <a className={css.buttonStyle}>Home</a>
         </Link>
@@ -14,6 +15,8 @@ const Header = () => (
         <Link href="/projects">
           <a className={css.buttonStyle}>Projects</a>
         </Link>
+        <span></span>
+        <span></span>
         <Link href="/education">
           <a className={css.buttonStyle}>Education</a>
         </Link>
@@ -23,7 +26,7 @@ const Header = () => (
         <Link href="/contact">
           <a className={css.buttonStyle}>Contact Me</a>
         </Link>
-
+        <span></span>
     </div>
 )
 

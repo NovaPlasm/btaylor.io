@@ -2,9 +2,7 @@ import Header from './Header'
 import css from "../styles.scss"
 
 const layoutStyle = {
-  margin: 20,
-  marginTop: 0,
-  padding: 20
+  paddingTop: 20
 }
 
 const Layout = (props) => (

@@ -1,48 +1,210 @@
 body {
   margin: 0;
   background-image: url("https://i.imgur.com/el0R4rO.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: 20% 100%;
-}
-
-.grid {
-  display: grid;
-  background-color: rgba(0, 0, 0, 0.6);
-  grid-template-rows: auto 1fr 1fr;
-  height: 100vh;
-  color: #fff;
-}
-
-.headerGrid {
-  display: grid;
-  padding: 0 25% 0 25%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.buttonStyle {
   font-family: 'Montserrat', sans-serif;
-  border: 2px solid #fff;
-  border-radius: 16px;
-  padding: 7px 10px 7px 10px;
-  text-decoration: none;
-  color: #fff;
-  margin-right:16px;
-  min-width: 118px;
-  text-align: center;
-  place-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
+// Animations
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadein2 {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein2 {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein2 {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein2 {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
 }
 
 .hello {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 45px;
-  justify-self: center;
-  align-self: end;
-  margin:0;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
 }
 
 .desc {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  align-self: start;
-  justify-self: center;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: fadein2 4s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein2 4s; /* Firefox < 16 */
+      -ms-animation: fadein2 4s; /* Internet Explorer */
+       -o-animation: fadein2 4s; /* Opera < 12.1 */
+          animation: fadein2 4s;
+}
+
+// Desktop/Tablet
+@media (min-width: 970px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: auto 1fr 1fr;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .headerGrid {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto auto auto auto auto auto auto auto auto 1fr;
+  }
+  
+  .buttonStyle {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 8px 0 8px;
+    min-width: 118px;
+    text-align: center;
+    place-self: center;
+  }
+  
+  .hello {
+    font-size: 45px;
+    justify-self: center;
+    align-self: end;
+    margin:0;
+  }
+  
+  .desc {
+    font-size: 16px;
+    align-self: start;
+    justify-self: center;
+  }  
+}
+
+// Tablets
+@media (max-width: 970px) and (min-width: 493px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: auto 1fr 1fr;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .headerGrid {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+  }
+  
+  .buttonStyle {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    padding: 7px 10px 7px 10px;
+    margin: 0 8px 0 8px;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 8px 10px 8px;
+    min-width: 118px;
+    text-align: center;
+    place-self: center;
+  }
+  
+  .hello {
+    font-size: 45px;
+    justify-self: center;
+    align-self: end;
+    margin:0;
+  }
+  
+  .desc {
+    font-size: 16px;
+    align-self: start;
+    justify-self: center;
+  }
+}
+
+// Phones
+@media (max-width: 492px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: auto 1fr 1fr;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .headerGrid {
+    display: none;
+    grid-template-columns: 1fr auto auto auto 1fr;
+  }
+  
+  .buttonStyle {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    padding: 7px 10px 7px 10px;
+    margin: 0 8px 0 8px;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 8px 10px 8px;
+    min-width: 118px;
+    text-align: center;
+    place-self: center;
+  }
+  
+  .hello {
+    font-size: 45px;
+    justify-self: center;
+    align-self: end;
+    margin:0;
+  }
+  
+  .desc {
+    font-size: 16px;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .hiddenScroll {
+    height: 100vh;
+  }
+
+  .hidden {
+    display: initial !important;
+  }
 }
