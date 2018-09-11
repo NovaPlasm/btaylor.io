@@ -13,57 +13,65 @@ body {
 }
 
 // Animations
-@keyframes fadein {
+@keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@keyframes fadein2 {
+@keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Firefox < 16 */
-@-moz-keyframes fadein {
+@-moz-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-moz-keyframes fadein2 {
+@-moz-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-webkit-keyframes fadein2 {
+@-webkit-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Internet Explorer */
-@-ms-keyframes fadein {
+@-ms-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-ms-keyframes fadein2 {
+@-ms-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
+@mixin animation($type, $duration) {
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: $type $duration; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: $type $duration; /* Firefox < 16 */
+      -ms-animation: $type $duration; /* Internet Explorer */
+       -o-animation: $type $duration; /* Opera < 12.1 */
+          animation: $type $duration;
+}
+
+/*  Generic   */
 .hello {
-  -moz-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-       -o-animation: fadein 2s; /* Opera < 12.1 */
-          animation: fadein 2s;
+  @include animation(fadein-immediate, 2s);
   img {
     vertical-align: middle;
     margin: 0 8px 0 8px;
@@ -71,17 +79,20 @@ body {
 }
 
 .desc {
-  -moz-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: fadein2 4s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein2 4s; /* Firefox < 16 */
-      -ms-animation: fadein2 4s; /* Internet Explorer */
-       -o-animation: fadein2 4s; /* Opera < 12.1 */
-          animation: fadein2 4s;
+  @include animation(fadein-delay, 4s);
   img {
     vertical-align: middle;
     margin: 0 8px 0 8px;
   }
+}
+
+/*  Projects  */
+
+.projectBox {
+  @include animation(fadein-immediate, 2s);
+  justify-self: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 // Desktop/Tablet
