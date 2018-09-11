@@ -13,57 +13,65 @@ body {
 }
 
 // Animations
-@keyframes fadein {
+@keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@keyframes fadein2 {
+@keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Firefox < 16 */
-@-moz-keyframes fadein {
+@-moz-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-moz-keyframes fadein2 {
+@-moz-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-webkit-keyframes fadein2 {
+@-webkit-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
 /* Internet Explorer */
-@-ms-keyframes fadein {
+@-ms-keyframes fadein-immediate {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-@-ms-keyframes fadein2 {
+@-ms-keyframes fadein-delay {
   0% { opacity:0; }
   33% { opacity:0; }
   100% { opacity:1; }
 }
 
+@mixin animation($type, $duration) {
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: $type $duration; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: $type $duration; /* Firefox < 16 */
+      -ms-animation: $type $duration; /* Internet Explorer */
+       -o-animation: $type $duration; /* Opera < 12.1 */
+          animation: $type $duration;
+}
+
+/*  Generic   */
 .hello {
-  -moz-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-       -o-animation: fadein 2s; /* Opera < 12.1 */
-          animation: fadein 2s;
+  @include animation(fadein-immediate, 2s);
   img {
     vertical-align: middle;
     margin: 0 8px 0 8px;
@@ -71,17 +79,77 @@ body {
 }
 
 .desc {
-  -moz-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: fadein2 4s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein2 4s; /* Firefox < 16 */
-      -ms-animation: fadein2 4s; /* Internet Explorer */
-       -o-animation: fadein2 4s; /* Opera < 12.1 */
-          animation: fadein2 4s;
+  @include animation(fadein-delay, 4s);
   img {
     vertical-align: middle;
     margin: 0 8px 0 8px;
   }
+}
+
+/*  Projects  */
+
+.projectBox {
+  @include animation(fadein-immediate, 2s);
+  justify-self: center;
+  align-self: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  margin: 10px;
+  border-radius:16px;
+  max-width: 640px;
+
+  h3 {
+    margin: 0;
+  }
+  .subtext {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+  .description {
+    margin-top: 7px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .techList {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-size: 14px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  .description2 {
+    margin-top: 7px;
+    font-size: 14px;
+    margin-bottom: 2px;;
+  }
+
+  .techList2 {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-size: 12px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
+/*  Education  */
+.educationBox {
+  @include animation(fadein-immediate, 2s);
+  justify-self: center;
+  align-self: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  margin: 10px;
+  border-radius:3px;
+  max-width: 640px;
 }
 
 // Desktop/Tablet
@@ -89,9 +157,9 @@ body {
   .grid {
     display: grid;
     background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: auto 1fr 1fr;
-    grid-auto-rows: 1fr;
-    height: 100vh;
+    grid-template-rows: 60px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
     color: #fff;
   }
   
@@ -131,8 +199,9 @@ body {
   .grid {
     display: grid;
     background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: auto 1fr 1fr;
-    height: 100vh;
+    grid-template-rows: 130px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
     color: #fff;
   }
   
@@ -173,8 +242,9 @@ body {
   .grid {
     display: grid;
     background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: auto 1fr 1fr;
-    height: 100vh;
+    grid-template-rows: 60px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
     color: #fff;
   }
   
@@ -209,11 +279,27 @@ body {
     justify-self: center;
   }
 
-  .hiddenScroll {
-    height: 100vh;
-  }
+  .projectBox {
+  
+    h3 {
+      
+    }
+    .subtext {
+      
+    }
+    .description {
+      
+    }
+    .techList {
+      columns: 1 !important;
+      -webkit-columns: 1 !important;
+      -moz-columns: 1 !important;
+    }
 
-  .hidden {
-    display: initial !important;
+    .techList2 {
+      columns: 1 !important;
+      -webkit-columns: 1 !important;
+      -moz-columns: 1 !important;
+    }
   }
 }
