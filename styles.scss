@@ -150,6 +150,56 @@ body {
   margin: 10px;
   border-radius:3px;
   max-width: 640px;
+
+  h3 {
+    margin: 0;
+  }
+  .subtext {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+  .description {
+    margin-top: 7px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .courseList {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-size: 14px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
+/*  Experience  */
+.experienceBox {
+  @include animation(fadein-immediate, 2s);
+  justify-self: center;
+  align-self: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  margin: 10px;
+  border-radius:3px;
+  max-width: 640px;
+
+  h3 {
+    margin: 0;
+  }
+  .subtext {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+  .description {
+    margin-top: 7px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
 }
 
 // Desktop/Tablet
