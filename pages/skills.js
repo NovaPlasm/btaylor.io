@@ -3,8 +3,8 @@ import css from "../styles.scss"
 
 export default () => (
     <Layout>
-      <p className={css.hello}>Programming Langages</p>
-      <div className={css.hello}>
+      <p className="hello">Programming Langages</p>
+      <div className="hello">
         <img width="142px" src="http://www.stickpng.com/assets/images/58480979cef1014c0b5e4901.png" />
         <img width="142px" src="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png" />
         <img width="142px" src="https://cdn-images-1.medium.com/max/1200/1*lJ32Bl-lHWmNMUSiSq17gQ.png" />
@@ -14,8 +14,8 @@ export default () => (
         <img width="142px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2000px-Python-logo-notext.svg.png" />
         <img width="142px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2000px-PHP-logo.svg.png" />
       </div>
-      <p className={css.desc} style={{fontSize:45, alignSelf: "end", margin: 0}}>Tools</p>
-      <div className={css.desc}>
+      <p className="desc" style={{fontSize:45, alignSelf: "end", margin: 0}}>Tools</p>
+      <div className="desc">
         <img width="142px" src="https://cdn-images-1.medium.com/max/512/1*6kK9j74vyOmXYm1gN6ARhQ.png" />
         <img width="142px" src="https://nodejs.org/static/images/logo.svg" />
         <img width="142px" src="https://humancoders-formations.s3.amazonaws.com/uploads/course/logo/22/formation-mongodb.png" />

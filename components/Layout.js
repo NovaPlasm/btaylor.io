@@ -6,7 +6,7 @@ const layoutStyle = {
 }
 
 const Layout = (props) => (
-  <div className={css.grid}>
+  <div className="grid">
     <div style={layoutStyle}>
       <Header />
     </div>

@@ -3,7 +3,7 @@ import css from "../styles.scss"
 
 export default () => (
     <Layout>
-      <p className={css.hello}>Do you want to contact Beau?</p>
-      <p className={css.desc}>You can usually find him climbing a mountain or writing some code</p>
+      <img className="contactImage" src="https://i.imgur.com/z0JXqS4.jpg" />
+      <p className="contactText">You can contact me at <a href="tel:+18057987048">805-798-7048</a> or <a href="mailto:btaylorladd@hmc.edu">btaylorladd@hmc.edu</a></p>
     </Layout>
 )

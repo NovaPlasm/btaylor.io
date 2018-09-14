@@ -93,7 +93,7 @@ body {
   justify-self: center;
   align-self: center;
   border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(116, 116, 116, 0.3);
   padding: 12px;
   margin: 10px;
   border-radius:16px;
@@ -145,10 +145,10 @@ body {
   justify-self: center;
   align-self: center;
   border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(116, 116, 116, 0.3);
   padding: 12px;
   margin: 10px;
-  border-radius:3px;
+  border-radius:16px;
   max-width: 640px;
 
   h3 {
@@ -181,24 +181,46 @@ body {
   justify-self: center;
   align-self: center;
   border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(116, 116, 116, 0.3);
   padding: 12px;
   margin: 10px;
-  border-radius:3px;
+  border-radius:16px;
   max-width: 640px;
 
   h3 {
     margin: 0;
   }
-  .subtext {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 14px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
   }
+
   .description {
     margin-top: 7px;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 2px;
+  }
+}
+
+.contactImage {
+  @include animation(fadein-immediate, 2s);
+  justify-self: center;
+  align-self: end;
+  margin:0;
+  border-radius:16px;
+  max-width: 640px;
+  border-radius: 16px;
+}
+
+.contactText {
+  @include animation(fadein-delay, 4s);
+  font-size: 16px;
+  align-self: start;
+  justify-self: center;
+  a {
+    text-decoration: none;
+    color: rgb(32, 240, 255)
   }
 }
 
