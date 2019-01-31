@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import { Education, Experience, Projects, Skills, Contact, Home } from './pages';
+import Home from './pages/home';
+import Education from './pages/education';
+import Experience from './pages/experience';
+import Projects from './pages/projects';
+import Skills from './pages/skills';
+import Contact from './pages/contact';
 
 class App extends Component {
   render() {
