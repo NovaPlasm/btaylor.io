@@ -1,30 +1,30 @@
-import Link from 'next/link'
-import css from "../styles.scss"
+import React from 'react';
+import Link from 'react-router-dom';
 
 const Header = () => (
     <div className="headerGrid">
         <title>Beau Taylor-Ladd's Resume</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
         <span></span>
-        <Link href="/">
-          <a className="buttonStyle">Home</a>
+        <Link href="/" className="buttonStyle">
+          Home
         </Link>
-        <Link href="/skills">
-          <a className="buttonStyle">Skills</a>
+        <Link href="/skills" className="buttonStyle">
+          Skills
         </Link>
-        <Link href="/projects">
-          <a className="buttonStyle">Projects</a>
+        <Link href="/projects" className="buttonStyle">
+          Projects
         </Link>
         <span></span>
         <span></span>
-        <Link href="/education">
-          <a className="buttonStyle">Education</a>
+        <Link href="/education" className="buttonStyle">
+          Education
         </Link>
-        <Link href="/experience">
-          <a className="buttonStyle">Experience</a>
+        <Link href="/experience" className="buttonStyle">
+          Experience
         </Link>
-        <Link href="/contact">
-          <a className="buttonStyle">Contact Me</a>
+        <Link href="/contact" className="buttonStyle">
+          Contact Me
         </Link>
         <span></span>
     </div>

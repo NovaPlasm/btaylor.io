@@ -1,9 +1,9 @@
-import Header from './Header'
-import css from "../styles.scss"
+import React from 'react';
+import Header from './Header';
 
 const layoutStyle = {
   paddingTop: 20
-}
+};
 
 const Layout = (props) => (
   <div className="grid">
@@ -12,6 +12,6 @@ const Layout = (props) => (
     </div>
     {props.children}
   </div>
-)
+);
 
-export default Layout
+export default Layout;
