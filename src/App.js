@@ -12,14 +12,15 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <link rel="stylesheet" href="/_next/static/style.css" />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/education" component={Education} />
-        <Route path="/experience" component={Experience} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/skills" component={Skills} />
-        <Route path="/contact" component={Contact} />
+        <React.Fragment>
+          <link rel="stylesheet" href="/_next/static/style.css" />
+          <Route exact path="/" component={Home} />
+          <Route path="/education" component={Education} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/skills" component={Skills} />
+          <Route path="/contact" component={Contact} />
+        </React.Fragment>
       </Router>
     );
   }
