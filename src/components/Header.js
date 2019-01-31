@@ -1,29 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles.scss';
 
 const Header = () => (
     <div className="headerGrid">
         <title>Beau Taylor-Ladd's Resume</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
         <span></span>
-        <Link href="/" className="buttonStyle">
+        <Link to="/" className="buttonStyle">
           Home
         </Link>
-        <Link href="/skills" className="buttonStyle">
+        <Link to="/skills" className="buttonStyle">
           Skills
         </Link>
-        <Link href="/projects" className="buttonStyle">
+        <Link to="/projects" className="buttonStyle">
           Projects
         </Link>
         <span></span>
         <span></span>
-        <Link href="/education" className="buttonStyle">
+        <Link to="/education" className="buttonStyle">
           Education
         </Link>
-        <Link href="/experience" className="buttonStyle">
+        <Link to="/experience" className="buttonStyle">
           Experience
         </Link>
-        <Link href="/contact" className="buttonStyle">
+        <Link to="/contact" className="buttonStyle">
           Contact Me
         </Link>
         <span></span>
