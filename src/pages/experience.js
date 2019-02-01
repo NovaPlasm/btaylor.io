@@ -8,7 +8,12 @@ class Experience extends Component {
       <Layout>
         <div className="experienceBox">
           <h3>Developer Intern | <a href="www.cbtnuggets.com">CBT Nuggets</a> | May 2018 - Present</h3>
-          <p className="description">Full-stack developer responsible for implementing a new content platform for CBT Nuggets.  Daily responsibilities included web development using ReactJS, email template optimization for all modern and highly used clients, and development of web landers used at the Society for Human Resource Management Conference</p>
+          <p className="description">
+          <strong>Fall 2018-Present:</strong> Lead engineer migrating a WordPress blog into the new dynamic ReactJS-based blog that I created. In this role I work directly with Marketing and Design team leads in order to create the best product for their needs.
+          <br />
+          <br />
+          <strong>Summer 2018:</strong> Full-stack developer responsible for implementing a new content platform for CBT Nuggets. Responsibilities included web development using ReactJS, email template optimization for all modern and highly used clients, and development of web landers used at the Society for Human Resource Management Conference
+          </p>
           <br />
           <br />
           <h3>Computer Information Services Intern | <a href="https://www.hmc.edu/cis/">Harvey Mudd College</a> | Sept 2017-Present</h3>

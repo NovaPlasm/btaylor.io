@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background-image: url("https://i.imgur.com/el0R4rO.jpg");
+  background-image: url("./assets/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 20% 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .hidden {
@@ -95,12 +95,13 @@ body {
   border: 1px solid rgba(255,255,255,0.4);
   background: rgba(116, 116, 116, 0.3);
   padding: 12px;
-  margin: 10px;
+  margin: 10px auto 0 auto;
   border-radius:16px;
   max-width: 640px;
 
   h3 {
     margin: 0;
+    font-size: 24px;
   }
   .subtext {
     margin-top: 2px;
@@ -227,7 +228,6 @@ body {
 // Desktop/Tablet
 @media (min-width: 970px) {
   .grid {
-    display: grid;
     background-color: rgba(0, 0, 0, 0.6);
     grid-template-rows: 60px;
     grid-auto-rows: auto;
@@ -249,7 +249,6 @@ body {
     margin: 0 8px 0 8px;
     min-width: 118px;
     text-align: center;
-    place-self: center;
   }
   
   .hello {

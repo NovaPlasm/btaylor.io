@@ -5,7 +5,7 @@ import '../styles.scss';
 const Header = () => (
     <div className="headerGrid">
         <title>Beau Taylor-Ladd's Resume</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
         <span></span>
         <Link to="/" className="buttonStyle">
           Home

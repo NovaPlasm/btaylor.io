@@ -2,7 +2,10 @@ import React from 'react';
 import Header from './Header';
 
 const layoutStyle = {
-  paddingTop: 20
+  paddingTop: 20,
+  paddingBottom: 20,
+  position: "sticky",
+  top: 0
 };
 
 const Layout = (props) => (
