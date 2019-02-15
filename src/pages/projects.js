@@ -6,7 +6,7 @@ class Projects extends Component {
   render() {
     return (
       <Layout>
-        <div className="projectBox">
+        <div className="informationBox">
           <h3>Algorithmic Trader | Programming Practicum | 2019-Present</h3>
           <p className="subtext"><em>Market Modelling & Machine Learning – Team of 3</em></p>
           <p className="description">Fully customizable web app based algorithmic stock and options trader reliant on market modelling and news-based machine learning. In development.</p>

@@ -1,4 +1,4 @@
-body {
+body,.informationBox::before {
   margin: 0;
   background-image: url("./assets/background.jpg");
   background-repeat: no-repeat;
@@ -72,24 +72,35 @@ body {
 /*  Generic   */
 .hello {
   @include animation(fadein-immediate, 2s);
+  text-align: center;
   img {
-    vertical-align: middle;
-    margin: 0 8px 0 8px;
+    margin: 0 auto;
   }
 }
 
 .desc {
   @include animation(fadein-delay, 4s);
+  text-align: center;
   img {
     vertical-align: middle;
-    margin: 0 8px 0 8px;
+    margin: 0 auto;
   }
 }
 
-/*  Projects  */
+/*  Information Box  */
+.informationBox::before {
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(10px);
+  z-index: -1;
+}
 
-.projectBox {
-  @include animation(fadein-immediate, 2s);
+.informationBox {
   justify-self: center;
   align-self: center;
   border: 1px solid rgba(255,255,255,0.4);
@@ -98,22 +109,41 @@ body {
   margin: 10px auto 0 auto;
   border-radius:16px;
   max-width: 640px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
 
   h3 {
     margin: 0;
     font-size: 24px;
   }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
   .subtext {
     margin-top: 2px;
     margin-bottom: 2px;
     font-size: 14px;
   }
+
   .description {
     margin-top: 7px;
     font-size: 12px;
     margin-bottom: 2px;
   }
-  .techList {
+
+  .description2 {
+    margin-top: 7px;
+    font-size: 14px;
+    margin-bottom: 2px;;
+  }
+
+  // Education
+  .courseList {
     margin-top: 7px;
     margin-bottom: 0px;
     padding-left: 20px;
@@ -123,10 +153,15 @@ body {
     -moz-columns: 2;
   }
 
-  .description2 {
+  // Projects
+  .techList {
     margin-top: 7px;
+    margin-bottom: 0px;
+    padding-left: 20px;
     font-size: 14px;
-    margin-bottom: 2px;;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
   }
 
   .techList2 {
@@ -138,88 +173,28 @@ body {
     -webkit-columns: 2;
     -moz-columns: 2;
   }
+ 
 }
 
-/*  Education  */
-.educationBox {
-  @include animation(fadein-immediate, 2s);
-  justify-self: center;
-  align-self: center;
-  border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(116, 116, 116, 0.3);
-  padding: 12px;
-  margin: 10px auto 0 auto;
-  border-radius:16px;
-  max-width: 640px;
-
-  h3 {
-    margin: 0;
-    font-size: 24px;
-  }
-  .subtext {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 14px;
-  }
-  .description {
-    margin-top: 7px;
-    font-size: 12px;
-    margin-bottom: 2px;
-  }
-  .courseList {
-    margin-top: 7px;
-    margin-bottom: 0px;
-    padding-left: 20px;
-    font-size: 14px;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-  }
-}
-
-/*  Experience  */
-.experienceBox {
-  @include animation(fadein-immediate, 2s);
-  justify-self: center;
-  align-self: center;
-  border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(116, 116, 116, 0.3);
-  padding: 12px;
-  margin: 10px;
-  border-radius:16px;
-  max-width: 640px;
-
-  h3 {
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .description {
-    margin-top: 7px;
-    font-size: 14px;
-    margin-bottom: 2px;
-  }
-}
+/* Contact Us Page */
 
 .contactImage {
   @include animation(fadein-immediate, 2s);
   justify-self: center;
-  align-self: end;
-  margin:0;
+  align-self: center;
+  margin: 0 auto;
   border-radius:16px;
   max-width: 640px;
   border-radius: 16px;
+  text-align: center;
 }
 
 .contactText {
   @include animation(fadein-delay, 4s);
   font-size: 16px;
-  align-self: start;
+  align-self: center;
   justify-self: center;
+  text-align: center;
   a {
     text-decoration: none;
     color: rgb(32, 240, 255)

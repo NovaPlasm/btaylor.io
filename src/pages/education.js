@@ -6,7 +6,7 @@ class Education extends Component {
   render() {
     return (
       <Layout>
-        <div className="educationBox">
+        <div className="informationBox">
           <h3>Harvey Mudd College | Bachelor | 2021</h3>
           <p className="subtext"><em>Computer Science, Minor: Economics</em></p>
           <p className="description">Courses (In Progress):</p>
