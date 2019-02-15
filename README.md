@@ -13,7 +13,7 @@ npm install
 or
 ```bash
 yarn install
-``
+```
 
 ## Running
 
