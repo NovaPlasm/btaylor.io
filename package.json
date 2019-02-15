@@ -1,6 +1,6 @@
 {
   "name": "test",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.11.0",
@@ -14,7 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "pm2 start ./server.sh --name btaylor.io"
+    "deploy": "pm2 start -f ./server.sh --name btaylor.io"
   },
   "eslintConfig": {
     "extends": "react-app"
