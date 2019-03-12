@@ -23,6 +23,10 @@ class App extends Component {
       </Router>
     );
   }
+
+  componentDidMount(){
+    document.title = "Beau's Resume";
+  }
 }
 
 export default App;
