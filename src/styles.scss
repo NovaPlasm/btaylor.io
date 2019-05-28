@@ -1,17 +1,3 @@
-body,.informationBox::before {
-  margin: 0;
-  background-image: url("./assets/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 20% 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.hidden {
-  display: none;
-}
-
 // Animations
 @keyframes fadein-immediate {
   from { opacity: 0; }
@@ -202,31 +188,7 @@ body,.informationBox::before {
 }
 
 // Desktop/Tablet
-@media (min-width: 970px) {
-  .grid {
-    background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: 60px;
-    grid-auto-rows: auto;
-    min-height: 100vh;
-    color: #fff;
-  }
-  
-  .headerGrid {
-    display: grid;
-    grid-template-columns: 1fr auto auto auto auto auto auto auto auto auto auto auto auto 1fr;
-  }
-  
-  .buttonStyle {
-    border: 2px solid #fff;
-    border-radius: 16px;
-    padding: 7px 10px 7px 10px;
-    text-decoration: none;
-    color: #fff;
-    margin: 0 8px 0 8px;
-    min-width: 118px;
-    text-align: center;
-  }
-  
+@media (min-width: 970px) {  
   .hello {
     font-size: 45px;
     justify-self: center;
@@ -242,34 +204,7 @@ body,.informationBox::before {
 }
 
 // Tablets
-@media (max-width: 970px) and (min-width: 493px) {
-  .grid {
-    display: grid;
-    background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: 130px;
-    grid-auto-rows: auto;
-    min-height: 100vh;
-    color: #fff;
-  }
-  
-  .headerGrid {
-    display: grid;
-    grid-template-columns: 1fr auto auto auto 1fr;
-  }
-  
-  .buttonStyle {
-    border: 2px solid #fff;
-    border-radius: 16px;
-    padding: 7px 10px 7px 10px;
-    margin: 0 8px 0 8px;
-    text-decoration: none;
-    color: #fff;
-    margin: 10px 8px 10px 8px;
-    min-width: 118px;
-    text-align: center;
-    place-self: center;
-  }
-  
+@media (max-width: 970px) and (min-width: 493px) {  
   .hello {
     font-size: 45px;
     justify-self: center;
@@ -285,34 +220,7 @@ body,.informationBox::before {
 }
 
 // Phones
-@media (max-width: 492px) {
-  .grid {
-    display: grid;
-    background-color: rgba(0, 0, 0, 0.6);
-    grid-template-rows: 60px;
-    grid-auto-rows: auto;
-    min-height: 100vh;
-    color: #fff;
-  }
-  
-  .headerGrid {
-    display: none;
-    grid-template-columns: 1fr auto auto auto 1fr;
-  }
-  
-  .buttonStyle {
-    border: 2px solid #fff;
-    border-radius: 16px;
-    padding: 7px 10px 7px 10px;
-    margin: 0 8px 0 8px;
-    text-decoration: none;
-    color: #fff;
-    margin: 10px 8px 10px 8px;
-    min-width: 118px;
-    text-align: center;
-    place-self: center;
-  }
-  
+@media (max-width: 492px) {  
   .hello {
     font-size: 45px;
     justify-self: center;

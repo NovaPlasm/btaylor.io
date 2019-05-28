@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import './Layout.scss';
 
 const layoutStyle = {
   paddingTop: 20,

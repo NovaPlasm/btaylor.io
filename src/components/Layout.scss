@@ -1,0 +1,32 @@
+@media (min-width: 970px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: 60px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
+    color: #fff;
+  }
+}
+
+@media (max-width: 970px) and (min-width: 493px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: 130px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
+    color: #fff;
+  }
+}
+
+@media (max-width: 492px) {
+  .grid {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-rows: 60px;
+    grid-auto-rows: auto;
+    min-height: 100vh;
+    color: #fff;
+  }
+}
