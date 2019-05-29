@@ -1,0 +1,31 @@
+.carousel-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 30px 1fr 30px;
+  grid-gap: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+
+  .previous {
+    background: white;
+    border-color: white;
+    box-shadow: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+
+  .content {
+    width: 768px;
+  }
+
+  .next {
+    background: white;
+    border-color: white;
+    box-shadow: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+}
