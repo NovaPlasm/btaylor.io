@@ -35,7 +35,7 @@ class Carousel extends Component {
   render() {
     return (
       <div className="carousel-grid">
-        <button className="previous" onClick={() => {this.cycle(-1)}}>{'<'}</button>
+        <span className="previous" onClick={() => {this.cycle(-1)}} />
         <span className="content">
           {
             this.props.children.map((child, index) => {
@@ -44,7 +44,7 @@ class Carousel extends Component {
             })
           }
         </span>
-        <button className="next" onClick={() => {this.cycle(1)}}>{'>'}</button>
+        <span className="next" onClick={() => {this.cycle(1)}} />
       </div>
     );
   }

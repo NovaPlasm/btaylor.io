@@ -1,18 +1,16 @@
 .carousel-grid {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 30px 1fr 30px;
+  grid-template-columns: 50px 1fr 50px;
   grid-gap: 24px;
   font-family: "Source Sans Pro", sans-serif;
 
   .previous {
-    background: white;
-    border-color: white;
-    box-shadow: none;
-    border-radius: 25px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     align-self: center;
+    background-image: url('../assets/chevron-circle-left.svg');
+    background-size: cover;
   }
 
   .content {
@@ -20,12 +18,10 @@
   }
 
   .next {
-    background: white;
-    border-color: white;
-    box-shadow: none;
-    border-radius: 25px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     align-self: center;
+    background-image: url('../assets/chevron-circle-right.svg');
+    background-size: cover;
   }
 }
