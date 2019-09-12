@@ -4,8 +4,6 @@ import './Header.scss';
 
 const Header = () => (
     <div className="headerGrid">
-        <title>btaylor.io</title>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
         <span></span>
         <Link to="/" className="buttonStyle">
           Home
@@ -21,6 +19,6 @@ const Header = () => (
         </Link>
         <span></span>
     </div>
-)
+);
 
-export default Header
+export default Header;

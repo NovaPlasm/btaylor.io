@@ -1,57 +1,15 @@
-@media (min-width: 970px) {
-    .headerGrid {
-        display: grid;
-        grid-template-columns: 1fr auto auto auto auto 1fr;
-    }
-
-    .buttonStyle {
-        border: 2px solid #fff;
-        border-radius: 16px;
-        padding: 7px 10px 7px 10px;
-        text-decoration: none;
-        color: #fff;
-        margin: 0 8px 0 8px;
-        min-width: 118px;
-        text-align: center;
-    }
+.headerGrid {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto 1fr;
 }
 
-@media (max-width: 970px) and (min-width: 493px) {
-    .headerGrid {
-        display: grid;
-        grid-template-columns: 1fr auto auto auto 1fr;
-    }
-      
-    .buttonStyle {
-        border: 2px solid #fff;
-        border-radius: 16px;
-        padding: 7px 10px 7px 10px;
-        margin: 0 8px 0 8px;
-        text-decoration: none;
-        color: #fff;
-        margin: 10px 8px 10px 8px;
-        min-width: 118px;
-        text-align: center;
-        place-self: center;
-    }
-}
-
-@media (max-width: 492px) {
-    .headerGrid {
-        display: none;
-        grid-template-columns: 1fr auto auto auto 1fr;
-    }
-      
-    .buttonStyle {
-        border: 2px solid #fff;
-        border-radius: 16px;
-        padding: 7px 10px 7px 10px;
-        margin: 0 8px 0 8px;
-        text-decoration: none;
-        color: #fff;
-        margin: 10px 8px 10px 8px;
-        min-width: 118px;
-        text-align: center;
-        place-self: center;
-    }
+.buttonStyle {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 8px 0 8px;
+    min-width: 118px;
+    text-align: center;
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import Carousel from '../components/Carousel';
 import ProjectContainer from '../components/ProjectContainer';
-import './projects.scss';
 import btaylorImg from '../assets/projects/btaylor.io.jpg';
 import raytracerImg from '../assets/projects/raytracer.jpg';
 import buffaloImg from '../assets/projects/buffalo.jpg';
