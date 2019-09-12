@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Carousel.scss';
+import styled from 'styled-components';
+import ChevronLeft from '../assets/chevron-circle-left.svg';
+import ChevronRight from '../assets/chevron-circle-right.svg';
 
 class Carousel extends Component {
 
@@ -34,7 +36,7 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="carousel-grid">
+      <MainGrid>
         <span className="previous" onClick={() => {this.cycle(-1)}} />
         <span className="content">
           {
@@ -45,9 +47,38 @@ class Carousel extends Component {
           }
         </span>
         <span className="next" onClick={() => {this.cycle(1)}} />
-      </div>
+      </MainGrid>
     );
   }
 }
 
 export default Carousel;
+
+const MainGrid = styled.section`
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 5rem 1fr 5rem;
+  grid-gap: 2.4rem;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 4rem auto 0 auto;
+
+  .previous {
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+    background-image: url(${ChevronLeft});
+    background-size: cover;
+  }
+
+  .content {
+    width: 76.8rem;
+  }
+
+  .next {
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+    background-image: url(${ChevronRight});
+    background-size: cover;
+  }
+`;

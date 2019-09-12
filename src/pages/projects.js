@@ -15,7 +15,7 @@ class Projects extends Component {
     return (
       <Layout>
         <Carousel looping>
-          <ProjectContainer src={btaylorImg} title='btaylor.io' tags={['JavaScript', 'React']}>
+          <ProjectContainer src={btaylorImg} title='btaylor.io' tags={['JavaScript', 'React', 'AWS']}>
             The website that I use to host my digital resume and various projects.  The website is written using React, and hosted on an AWS Lightsail instance.
           </ProjectContainer>
           <ProjectContainer src={raytracerImg} title='Raytracing Engine' tags={['C++']}>
@@ -24,14 +24,14 @@ class Projects extends Component {
           <ProjectContainer src={''} title='wrk' tags={['JavaScript', 'React Native', 'GraphQL']}>
             A minimalist homework planning app built using React Native.  I use GraphQL and an AWS Dymo instance to store user information.  When adding new work, the app uses previous analytics to estimate which class you are entering for, the type of work, and the time it will take to finish the work.  If desired, the app can also make an optimized schedule.  In development.
           </ProjectContainer>
-          <ProjectContainer src={skiclubImg} title='5C Ski and Snowboard Club Website' tags={['JavaScript', 'React', 'GraphQL']}>
-            Informational website for the 5C Ski and Snowboard Club. Uses headless Wordpress as a content manager to allow club leaders to easily change information. Supports user accounts, trip creation, and custom profiles noting allergies, car space, etc. In development.
+          <ProjectContainer src={skiclubImg} title='5C Ski and Snowboard Club Website' tags={['JavaScript', 'React', 'GraphQL', 'AWS']}>
+            Informational website for the 5C Ski and Snowboard Club. Uses headless Wordpress as a content manager to allow club leaders to easily change information. Supports user accounts, trip creation, and custom profiles noting allergies, car space, etc. In development on an AWS EC2 instance.
           </ProjectContainer>
           <ProjectContainer src={buffaloImg} title='Buffalo' tags={['JavaScript']}>
             A continuous-deployment service meant to remove the hassle and paywall associated with typical continuous-deployment services.  Buffalo runs on your host server, and syncs with the designated git <code>master</code> branch in order to keep your server updated whenever there is commit.  As the service is open-source, compact, and ran on your own machine, there is minimal lagtime and resources used.
           </ProjectContainer>
           <ProjectContainer src={loxleyImg} title='Loxley' tags={['JavaScript', 'Big Data']}>
-            Loxley is a simple algorithmic trading software written in JavaScript and hosted on an AWS Lightsail instance.  This allows bidirectional communication with the algorithm and the chosen input (default is Slack).  The algorithm in use is one tested to have over 2,000% gains in 10 years.
+            Loxley is a simple algorithmic trading software written in JavaScript and hosted on an AWS Lightsail instance.  This allows bidirectional communication with the algorithm and the chosen input (default is Slack).  Trading algorithm uses Alpaca Money to simulate real-time stock market conditions and gains off a flight-to-quality model. Backtested using 10 years of market data to predict performance.
           </ProjectContainer>
           <ProjectContainer src={flightsimImg} title='Flight Simulator' tags={['JavaScript', 'WebGL']}>
             A simple flight simulator made using WebGL.  Featuring an infinite world and random world, the simulator allows you to move around by controlling the speed, yaw, pitch and roll of the aircraft.
