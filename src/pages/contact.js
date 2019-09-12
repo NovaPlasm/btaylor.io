@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
       <Layout>
         <Container>
-          <ContactText>You can contact me at <a href="tel:+18057987048">805-798-7048</a> or <a href="mailto:btaylorladd@hmc.edu">btaylorladd@hmc.edu</a></ContactText>
+          <ContactText>You can contact me by phone at <a href="tel:+18057987048">805-798-7048</a>, by email at <a href="mailto:btaylorladd@hmc.edu">btaylorladd@hmc.edu</a>, or on <a href="https://www.linkedin.com/in/btaylorladd/">LinkedIn</a></ContactText>
           <Img className="contactImage" alt="contact me!" src={ContactImage} />
         </Container>
       </Layout>
