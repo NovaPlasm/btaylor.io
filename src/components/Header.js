@@ -1,34 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles.scss';
+import styled from 'styled-components';
 
 const Header = () => (
-    <div className="headerGrid">
-        <title>Beau Taylor-Ladd's Resume</title>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+    <HeaderGrid>
         <span></span>
         <Link to="/" className="buttonStyle">
           Home
         </Link>
-        <Link to="/skills" className="buttonStyle">
-          Skills
-        </Link>
         <Link to="/projects" className="buttonStyle">
           Projects
         </Link>
-        <span></span>
-        <span></span>
-        <Link to="/education" className="buttonStyle">
-          Education
-        </Link>
-        <Link to="/experience" className="buttonStyle">
-          Experience
+        <Link to="/resume" className="buttonStyle">
+          Resume
         </Link>
         <Link to="/contact" className="buttonStyle">
           Contact Me
         </Link>
         <span></span>
-    </div>
-)
+    </HeaderGrid>
+);
 
-export default Header
+export default Header;
+
+const HeaderGrid = styled.nav`
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto 1fr;
+  
+  .buttonStyle {
+    border: .2rem solid #fff;
+    border-radius: 16px;
+    padding: .7rem 1rem .7rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 .8rem 0 .8rem;
+    min-width: 11.8rem;
+    text-align: center;
+  }
+`;

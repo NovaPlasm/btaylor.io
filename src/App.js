@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/home';
-import Education from './pages/education';
-import Experience from './pages/experience';
 import Projects from './pages/projects';
-import Skills from './pages/skills';
+import Resume from './pages/resume';
 import Contact from './pages/contact';
 
 class App extends Component {
@@ -14,10 +12,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/education" component={Education} />
-          <Route path="/experience" component={Experience} />
           <Route path="/projects" component={Projects} />
-          <Route path="/skills" component={Skills} />
+          <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
         </Switch>
       </Router>

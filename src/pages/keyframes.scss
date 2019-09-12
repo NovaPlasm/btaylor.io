@@ -1,0 +1,73 @@
+// Animations
+@keyframes fadein-immediate {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadein-delay {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein-immediate {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein-delay {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein-immediate {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein-delay {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein-immediate {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein-delay {
+  0% { opacity:0; }
+  33% { opacity:0; }
+  100% { opacity:1; }
+}
+  
+@mixin animation($type, $duration) {
+  -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: $type $duration; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: $type $duration; /* Firefox < 16 */
+      -ms-animation: $type $duration; /* Internet Explorer */
+        -o-animation: $type $duration; /* Opera < 12.1 */
+          animation: $type $duration;
+}
+
+
+div {
+  align-self: center;
+  justify-self: center;
+  
+  .hello {
+    @include animation(fadein-immediate, 2s);
+    text-align: center;
+    
+  }
+    
+  .desc {
+    @include animation(fadein-delay, 4s);
+    text-align: center; 
+  }
+}
